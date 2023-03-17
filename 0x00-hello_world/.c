@@ -7,6 +7,5 @@
  */
 int main(void)
 {
-	printf("What is yout name?");
 	return (0);
 }
