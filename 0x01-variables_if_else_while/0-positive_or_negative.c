@@ -3,9 +3,12 @@
 #include <time.h>
 /* added the header stdio.h */
 
-/* betty style doc for function main goes here */
-
-int main ()
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main (void)
 {
 	int n;
 
