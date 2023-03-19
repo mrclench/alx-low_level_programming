@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /**
  * main - Entry point
  *
@@ -5,15 +7,13 @@
  */
 int main(void)
 {
-    char c;
+	char i;
 
-    for (c = '0'; c <= '9'; c++)
-        putchar(c);
-    for (c = 'a'; c <= 'f'; c++)
-        putchar(c);
+	for (i = '0' ; i <= '9' ; i++)
+		putchar(i);
+	for (i = 'A' ; i <= 'F' ; i++)
+		putchar(i);
+	putchar('\n');
 
-    putchar('\n');
-
-    return (0);
+	return (0);
 }
-
