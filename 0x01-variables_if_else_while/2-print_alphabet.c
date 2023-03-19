@@ -5,17 +5,13 @@
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-    char letter = 'a';
+	char i;
 
-    while (letter <= 'z')
-    {
-        putchar(letter);
-        letter++;
-    }
-    
-    putchar('\n');
-
-    return (0);
+	for (i  = 'a' ; i  <= 'z' ; i++)
+		putchar(i);
+	putchar('\n');
+	return (0);
 }
