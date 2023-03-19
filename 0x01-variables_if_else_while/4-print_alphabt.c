@@ -3,22 +3,17 @@
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: 0 (Success)
  */
 
 int main(void)
 {
-    char c;
+	char i;
 
-    for (c = 'a'; c <= 'z'; c++)
-    {
-        if (c != 'e' && c != 'q')
-        {
-            putchar(c);
-        }
-    }
-    putchar('\n');
-
-    return (0);
+	for (i = 'a' ; i <= 'z' ; i++)
+		if (i != 'q' && i != 'e')
+			putchar(i);
+	putchar('\n');
+		return (0);
 }
 
