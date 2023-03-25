@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include <stdio.h>
 
 /**
  * main - Entry point
@@ -8,10 +7,14 @@
  */
 int main(void)
 {
-	char *msg = "\"and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	size_t len = sizeof(*msg);
+	char *str = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	int len = 0;
 
-	write(STDOUT_FILENO, msg, len - 1);
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+	write(2, str, len);
 
 	return (1);
 }
