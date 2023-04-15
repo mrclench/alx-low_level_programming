@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_number - prints number
+ * print_number - function that prints an integer
  *
  * @n: integer to print to character
  */
 void print_number(int n)
 {
-	long m; /* power of 10 */
+	long m; 
 	int c; /* boolean check */
 	long num; /* convert int to long */
 
