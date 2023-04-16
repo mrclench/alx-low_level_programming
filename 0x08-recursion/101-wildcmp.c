@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * wildcmp - compares two strings with wildcards in the second 
+ * wildcmp - compares two strings with wildcards in the second.
  * char * - strings to compare
  * @s1: first string
  * @s2: second string
