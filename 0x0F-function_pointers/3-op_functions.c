@@ -1,75 +1,54 @@
-#include "3-calc.h"
 #include <stdio.h>
-
+#include <stdlib.h>
+#include "3-calc.h"
 /**
- * op_add - the sum of a and b
- * @a: num 1
- * @b: num 2
- * Return: the sum
+ * op_add - adds 5 functions
+ * @a: int a
+ * @b: int b
+ * Return: sum of a and b
  */
 int op_add(int a, int b)
 {
-	int sum;
-
-	sum = a + b;
-	return (sum);
+	return (a + b);
 }
-
 /**
- * op_sub - diference of a and b
- * @a: num1
- * @b: num 2
- * Return: the diference
+ * op_sub - subtracts
+ * @a: int a
+ * @b: int b
+ * Return: difference
  */
 int op_sub(int a, int b)
 {
-
-	int dif;
-
-	dif = a - b;
-	return (dif);
+	return (a - b);
 }
-
-
 /**
- * op_mul - multiply a and b
- * @a: num1
- * @b: num2
- * Return: the product
+ * op_mul - multiplies
+ * @a: int a
+ * @b: int b
+ * Return: multipliy
  */
 int op_mul(int a, int b)
 {
-	int mul;
-
-	mul = a * b;
-	return (mul);
+	return (a * b);
 }
-
-
 /**
- * int op_div - divide a and b
- * @a: num1
- * @b: num2
- * Return: the division
+ * op_div - division
+ * @a: int a
+ * @b: int b
+ * Return: division
  */
 int op_div(int a, int b)
 {
-	int div;
-
-	div = a / b;
-	return (div);
+	return (a / b);
 }
-
 /**
- * op_mod - mod of the division
- * @a: num1
- * @b: num2
- * Return: : returns the remainder of the division
+ * op_mod - modulos
+ * @a: int a
+ * @b: int b
+ * Return: modulo of ints
  */
+
 int op_mod(int a, int b)
 {
-	int mod;
-
-	mod = a % b;
-	return (mod);
+	return (a % b);
 }
