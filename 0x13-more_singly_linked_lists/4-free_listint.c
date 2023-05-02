@@ -4,6 +4,7 @@
  * free_listint - frees the linked list
  * @head: head of struct
  *
+ * Return: void
  */
 void free_listint(listint_t *head)
 {
