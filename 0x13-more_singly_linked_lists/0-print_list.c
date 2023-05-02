@@ -4,13 +4,13 @@
 
 /**
  * print_list - print nodes in a lnked list
- * @h: head node of list
+ * @h: first node of list
  * Return: size_t
  */
 
 size_t print_list(const list_t *h)
 {
-	int count = 0;
+	size_t len = 0;
 
 	while (h != NULL)
 	{
@@ -18,13 +18,13 @@ size_t print_list(const list_t *h)
 		{
 			printf("[%d] %s\n", 0, "(nil)");
 			h = h->next;
-			count++;
+			len++;
 			continue;
 		}
 		printf("[%d] %s\n", h->len, h->str);
 		h = h->next;
-		count++;
+		len++;
 	}
 
-	return (count);
+	return (len);
 }
