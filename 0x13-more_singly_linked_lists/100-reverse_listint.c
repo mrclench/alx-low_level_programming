@@ -9,39 +9,22 @@
  *
  * Return: void
  */
-listint_t *reverse_recur(listint_t *first, listint_t *second)
-{
-	listint_t *ptr, *previous = NULL;
-
-	ptr = first;
-	while (ptr->next != second)
-	{
-		previous = ptr;
-		ptr = ptr->next;
-	}
-
-	if (previous != NULL)
-		previous->next = first;
-	second = first->next;
-	first->next = ptr->next;
-	if (first != ptr && second != first)
-		second = reverse_recur(second, first);
-	ptr->next = second;
-	return (ptr);
-}
-
-/**
- * reverse_listint - reverses a listint list
- *
- * @head: list to reverse
- *
- * Return: new head of list
- */
 listint_t *reverse_listint(listint_t **head)
 {
-	if (head == NULL || *head == NULL)
-		return (NULL);
+	listint_t *prev;
+	listint_t *n;
 
-	*head = reverse_recur(*head, NULL);
+	prev = NULL;
+	n = NULL;
+
+	while (*head != NULL)
+	{
+		n = (*head)->next;
+		(*head)->next = prev;
+		prev = *head;
+		*head = n;
+	}
+
+	*head = prev;
 	return (*head);
 }
