@@ -15,46 +15,35 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	ssize_t rl, rw;
-	char *monbuf = malloc(sizeof(char) * letters);
-	if (!monbuf)
+	int file;
+	int length, wrotechars;
+	char *buff;
+
+	if (filename == NULL || letters == 0)
+		return (0);
+	buff = malloc(sizeof(char) * (letters));
+	if (buff == NULL)
 		return (0);
 
-	if (filename == NULL)
+	file = open(filename, O_RDONLY);
+	if (file == -1)
 	{
-		free(monbuf);
+		free(buff);
 		return (0);
-        }
-
-        fd = open(filename, O_RDWR);
-
-	if (fd == -1)
+	}
+	length = read(file, buff, letters);
+	if (length == -1)
 	{
-		perror("Error openening file");
-		free(monbuf);
+		free(buff);
+		close(file);
 		return (0);
-        }
+	}
 
-	rl = read(fd, monbuf, letters);
-	if (rl < 0)
-	{
-		perror("Error readinf file");
-		free(monbuf);
-		close(fd);
+	wrotechars = write(STDOUT_FILENO, buff, length);
+
+	free(buff);
+	close(file);
+	if (wrotechars != length)
 		return (0);
-        }
-
-	rw = write(STDOUT_FILENO, monbuf, rl);
-	if (rw < 0)
-	{
-		perror("Error writing to stdout");
-		free(monbuf);
-		close(fd);
-		return (0);
-        }
-
- 	free(monbuf);
- 	close(fd);
- 	return (rw);
+	return (length);
 }
