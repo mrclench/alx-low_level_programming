@@ -17,12 +17,11 @@ int create_file(const char *filename, char *text_content)
 	int fd;
 	int length = 0;
 	int len = 0;
-	char *file;
 
 	if (filename == NULL)
 		return (-1);
 
-	fd = open(filename, 0_WRONLY | 0_CREAT | 0_TRUNC, 0600);
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 	if (fd == -1)
 		return (-1);
 
@@ -33,7 +32,7 @@ int create_file(const char *filename, char *text_content)
 	}
 	for (len = 0; text_content[len]; len++)
 		;
-	length = write(fd, text_content, inlen);
+	length = write(fd, text_content, len);
 	
 	if (close(fd) == -1 || len != length)
 		return (-1);
