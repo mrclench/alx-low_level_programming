@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdio.h>
+#define BUFSIZE 1024
 
 int _strlen(char *s);
 ssize_t read_textfile(const char *filename, size_t letters);
