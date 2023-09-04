@@ -7,8 +7,9 @@
 
 /**
  * read_textfile - function that reads a text file and prints
- * 
+ *
  * @filename: represents the text file opened
+ * @letters: the number of letters to read and print
  *
  * Return: return the number of letter that was read and printed else 0
  */
