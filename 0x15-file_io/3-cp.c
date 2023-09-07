@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <sys/types.h>
 
-#define BUFSIZE 1024  // Define the buffer size
+#define BUFSIZE 1024  /* Define the buffer size */
 
 void exit_with_error(const char *message, int exit_code)
 {
