@@ -4,29 +4,26 @@
 
 /**
  * binary_to_uint - function that converts binary into an int
+ *
  * @b: char parameter being used
  *
- * Return: converted number or 0 if b is 0
+ * Return: Returns converted number
  */
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i = 0;
-	unsigned int c;
-	unsigned int len;
+	int a;
+	unsigned int decimal_val = 0;
 
-	if (b == NULL)
-	{
+	if (!b)
 		return (0);
-	}
-	len = strlen(b);
-	for (c = 0; c < len; c++)
-	{
-		if (b[c] != '0' && b[c] != '1')
-			return (0);
-	i <<= 1;
-	i |= (b[c] - '0');
-	}
-	return (i);
-}
 
+	for (a = 0; b[a]; a++)
+	{
+		if (b[a] < '0' || b[a] > '1')
+			return (0);
+		decimal_val = 2 * decimal_val + (b[a] - '0');
+	}
+
+	return (decimal_val);
+}
