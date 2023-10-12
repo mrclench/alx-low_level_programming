@@ -1,5 +1,5 @@
 #include "lists.h"
-/*
+/**
  * add_dnodeint - this function adds a new node
  *
  * @head: Pointer with address to first node
