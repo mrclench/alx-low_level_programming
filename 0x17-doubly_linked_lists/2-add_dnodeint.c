@@ -2,9 +2,9 @@
 /**
  * add_dnodeint - this function adds a new node
  *
- * @head: Pointer with address to first node
+ * @head: Pointer pointer of the to first node
  *
- * @n: pointer to the list
+ * @n: integer to store nodes
  *
  * Return: address of the new node or NULL
  */
