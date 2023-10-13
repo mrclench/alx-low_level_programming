@@ -2,9 +2,9 @@
 
 /**
  * add_dnodeint_end - function adds new node at end of a list
-
+ *
  * @head: Pointer to the pointer of first node
-
+ *
  * @n: Integer to store in node
  *
  * Return: Address of new element, or NULL on failure
