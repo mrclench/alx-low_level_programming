@@ -1,26 +1,32 @@
 #include "main.h"
-#include "2-strlen.c"
-#include <string.h>
-
 /**
- * _strncat - mai function to concatenate a string into another string
+ * _strncat - concatenate the strings
  *
- * @dest: destination of append
- * @src: src variable
- * @n: number of bytes
+ * @dest: the destination string
  *
- * Return: a character of value
+ * @src: the string to be added
+ *
+ * @n: the bytes from src
+ *
+ * Return: always 0 success
  */
-
 char *_strncat(char *dest, char *src, int n)
 {
-	int i;
-	int dest_len = strlen(dest);
+	int i, j;
 
-	for (i = 0 ; i < n && src[i] != '\0' ; i++)
-		dest[dest_len + i] = src[i];
-	dest[dest_len + i] = '\0';
+	i = 0;
+	j = 0;
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
+	while (src[j] != '\0' && j < n)
+	{
 
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = '\0';
 	return (dest);
 }
-

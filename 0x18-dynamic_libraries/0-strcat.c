@@ -6,6 +6,7 @@
  * _strcat - main funtion to concatenate two strings
  *
  * @dest: destination of append
+ *
  * @src: src
  *
  * Return: a character of value
