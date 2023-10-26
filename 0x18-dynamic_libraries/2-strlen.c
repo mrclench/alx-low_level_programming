@@ -1,19 +1,16 @@
 #include "main.h"
 
 /**
- * _strlen - returns the string length
- * @s: string whoes length to be prrinted
- *  Return: length of the string
+ *_strlen - swaps the value of two integers
+ * @s: The pointer value one
+ * Return: c
  */
-
 int _strlen(char *s)
 {
-	int i;
-	int count = 0;
+	int c = 0;
 
-	for (i = 0 ; s[i] != '\0' ; i++)
-	{
-		count++;
-	}
-	return (count);
+	while (s[c] != '\0')
+		c++;
+
+	return (c);
 }
