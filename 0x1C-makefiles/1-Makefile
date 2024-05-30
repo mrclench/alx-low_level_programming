@@ -1,8 +1,6 @@
 CC = gcc
 
-LINKERFLAG = -lm
-
 SRC := main.c school.c
 
 all:
-	${CC} main.c school.c -o school
+	$(CC) main.c school.c -o school
